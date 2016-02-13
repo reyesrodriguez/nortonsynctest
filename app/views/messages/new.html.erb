@@ -1,0 +1,21 @@
+<div class="row">
+<div class="col-md-8 contact">
+
+<div align="center">
+  <h3>Send A message to Us</h3>
+
+  <%= simple_form_for @message, url: contact_path do |message_form| %>
+    <span><%= message_form.input :name, :required => true, label: "Name" %></span>
+    <span><%= message_form.input :email, :required => true, label: "Email" %></span>
+    <span><%= message_form.input :content, :required => true, label: "Message" %></span>
+  
+    <div>
+      </br>
+      <%= message_form.button :submit, "Send Message", :class=> "btn btn-primary" %>
+    </div>
+  <% end %>
+</div>
+
+</div>
+</div>
+

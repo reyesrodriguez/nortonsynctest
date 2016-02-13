@@ -1,0 +1,44 @@
+
+<div class= "logout">
+<% if current_user %>
+<%=     link_to "Logout", :controller => 'sessions', :action => 'destroy' %>
+<% else %>
+<%=     link_to "Log-in", :controller => 'sessions', :action => 'create' %>
+<% end %>
+</div>
+
+<div class="row">
+<div class="col-md-6 songs">
+ <%= form_tag songs_path, :method => 'get' do %>
+		<label for="search-by">Search By</label>
+				<select name="search_by" id="search-by">
+				<option value="title">Title</option>
+				<option value="writer">Writer</option>
+				<option value="artist">Artist</option>
+				<option value="publisher">Publisher</option>
+				<option value="theme">Theme</option>
+				</select>
+	<%= text_field_tag :search, params[:search], class: "form-control"%><br>
+	<%= submit_tag "Search", :name => nil, class: "btn btn-primary" %>
+	  <% end %>
+<table>
+	<tr>
+<th><h5> title </h5></th>
+<th><h5> artist </h5></th>
+<th><h5> writer </h5></th>
+<th><h5> publisher </h5></th>
+<th><h5> theme </h5></th>
+</tr>
+<% @songs.each do |song| %>
+	<tr>
+	<td><%= song.title %></td>
+	<td><%= song.artist %></td>
+	<td><%= song.writer %></td>
+	<td><%= song.publisher %></td>
+	<td><%= song.theme %></td>
+	<% end %>
+</tr>
+</table>
+
+</div>
+</div>
