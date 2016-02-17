@@ -1,9 +1,7 @@
 class Song < ActiveRecord::Base
-	def self.search(search)
-	if search
-		@songs = Song.find(:all, :conditions => ['name LIKE ?', "%#{search}%"])
-	else
-		Song.find(:all)
-	end
+
+def self.search(search)
+  where("artist ILIKE ? OR title ILIKE ? OR writer ILIKE ? OR publisher ILIKE ? OR theme ILIKE ?","%#{search}%", "%#{search}%","%#{search}%", "%#{search}%","%#{search}%")
+
 end
 end
