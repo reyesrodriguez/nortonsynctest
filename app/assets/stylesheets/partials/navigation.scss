@@ -1,10 +1,18 @@
 .navbar {
 	border: none;
 	box-shadow: none;
-	background: transparent;
+	background: black;
+	opacity: 0.5;
+	filter: alpha(opacity=50);
+
 }
 
-.nav {
-	font-size: 2rem;
+.navbar-default .navbar-nav>li>a {
+	font-size: 20px;
+	color:white;
+	font-family: 'lato', sans-serif;
+	font-weight: 700;
 }
+
+
 

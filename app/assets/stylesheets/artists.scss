@@ -1,3 +1,29 @@
 // Place all the styles related to the artists controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.gallery {
+	display:flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
+.item {
+	margin: 1em;
+	height: 250px;
+	width: 250px;
+	background:black;
+}
+
+.one {
+	background: url(del_aires.jpg);
+}
+.two{
+	background: url(don_dewey.jpg);
+}
+.name{
+	text-align: center;
+	font-family:'Lato', sans-serif;
+	font-weight: 700;
+}
+
