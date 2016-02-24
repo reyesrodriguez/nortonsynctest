@@ -9,7 +9,7 @@ class UsersController < ApplicationController
 		@user = User.new(user_params)
 		if @user.save
 			flash[:notice] = "welcome to Norton catalog!"
-			redirect_to '/songlist'
+			redirect_to '/songs'
 		else
 			flash[:alert] = "there was a problem. Please try again"
 			redirect_to :back

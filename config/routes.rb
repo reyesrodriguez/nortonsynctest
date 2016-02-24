@@ -3,10 +3,10 @@ Rails.application.routes.draw do
   get '/home' => 'pages#home'
   get '/licensing' => "pages#licensing"
   get '/catalogs' => 'pages#catalogs'
-  get '/music' => 'artists#music'
+  get '/music' => 'artists#index'
   get '/synch' => 'synch#synch'
 
-  get '/songlist' => 'songs#index'
+  get '/songs' => 'songs#index'
 
 
   get '/contact', to: 'messages#new', as: 'contact'

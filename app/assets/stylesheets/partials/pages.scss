@@ -3,10 +3,62 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 h1 {
-	text-align: center;
+	text-align: center;			
 	font-size: 5em;
 	font-family:'Lato', sans-serif;
 	font-weight: 900;
 	letter-spacing:5px;
 }
+
+p {
+	font-family:'Lato', sans-serif;
+}
+
+
+/*********catalogs flex box gallery*****************/
+
+
+.galeria {
+	display:flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
+.catalog {
+	margin: 1em;
+	height: 400px;
+	width: 400px;
+	margin-bottom:20px;
+	
+}
+
+.uno {
+	background: image-url('long.jpg') no-repeat;
+}
+.dos{
+	background: image-url('onyx.jpg') no-repeat;
+}
+.nombre{
+	text-align: center;
+	font-family:'Lato', sans-serif;
+	font-weight: 700;
+}
+
+/*********catalogs label info*****************/
+
+.grey {
+	background: grey;
+}
+
+.record-label {
+	text-align: center;
+	line-height: 1.333;
+}
+.record-label{
+	border-bottom: 3px solid black;
+	width: 9rem;
+	margin: 1rem auto 3rem;
+
+}
+
 

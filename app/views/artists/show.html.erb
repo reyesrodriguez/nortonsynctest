@@ -1,0 +1,20 @@
+<div class="row">
+	 <div class="col-md-8 col-md-offset-2">
+	 	<div>
+			<h3><%= @artist.name %></h3>
+			<%= image_tag @artist.image.url(:med) %>
+			<%= audio_tag @artist.song, :type => "mp3/audio", :controls => true, :autoplay => true %>
+			</div>
+
+			<div>
+		<% if current_user%>	
+		 <button><%= link_to 'Update', edit_artist_path(@artist) %></button>
+		 
+		 <button><%= link_to 'Song List', artists_path %></button>
+     <button><%= link_to 'Destroy', artist_path(@artist),
+              method: :delete,
+              data: { confirm: 'Are you sure? This cannot be undone!' } %></button>
+     <% end %>
+      </div>
+	 </div>
+ </div>

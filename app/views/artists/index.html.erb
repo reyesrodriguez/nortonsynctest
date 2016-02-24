@@ -1,0 +1,18 @@
+
+	<div class="row">
+		<div class="col-md-8 col-md-offset-2">
+			<h1>Music</h1>
+ 
+		<br>	
+		<div class="gallery">
+			<% @artist.each do |a| %>
+				<div class="groups">
+					<p class="name"><%= a.name %></p>
+				<div class="item">
+					<%= image_tag a.image.url(:med) %>
+				</div>
+				</div>
+				<% end %>
+			</div>
+		</div>
+	</div>

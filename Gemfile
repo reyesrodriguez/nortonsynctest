@@ -28,9 +28,13 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'mail_form'
 gem 'simple_form'
 
-# Use ActiveModel has_secure_password
- gem 'bcrypt', '~> 3.1.10'
+gem 'aws-sdk', '~> 1.5.7' # amazon web services gem
+gem 'paperclip'     # paperclip gem for file management
+gem 'dotenv-rails', :groups => [:development, :test]  # env variable to keep sensitive data hidden
+gem 'dotenv'
 
+# Use ActiveModel has_secure_password
+gem 'bcrypt', '~> 3.1.10'
 # Use Unicorn as the app server
 # gem 'unicorn'
 
