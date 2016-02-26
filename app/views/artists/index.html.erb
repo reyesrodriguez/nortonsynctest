@@ -2,14 +2,18 @@
 	<div class="row">
 		<div class="col-md-8 col-md-offset-2">
 			<h1>Music</h1>
- 
+ <%if current_user %>
+ 	<button><%= link_to "Add new Artist", new_artist_path %></button>
+ 	<button><%=link_to "Logout", :controller => 'sessions', :action => 'destroy' %></button>
+ <% end %>
 		<br>	
 		<div class="gallery">
 			<% @artist.each do |a| %>
 				<div class="groups">
-					<p class="name"><%= a.name %></p>
+					<h3 class="name"><%= a.name %></h3>
+
 				<div class="item">
-					<%= image_tag a.image.url(:med) %>
+					<a href='/artists/<%=a.id%>'><%= image_tag a.image.url(:med) %>
 				</div>
 				</div>
 				<% end %>

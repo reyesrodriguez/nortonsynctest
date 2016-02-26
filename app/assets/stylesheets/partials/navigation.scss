@@ -1,17 +1,34 @@
 .navbar {
 	border: none;
 	box-shadow: none;
-	border-radius: none;
-	background: transparent;
-	border-top: 1px solid black;
-	border-bottom: 1px solid black;
+	border-radius: 1px;
+	background: black;
+	opacity: 0.9;
 }
 
 .navbar-default .navbar-nav>li>a {
+	color:white;
 	font-size: 20px;
 	font-family: 'lato', sans-serif;
-	font-weight: 700;
+	
+}
 
+#menu>li:hover{
+	background: white;
+	color:black;
+	border-left: solid darkred 3px;
+	-o-transition:color .3s ease-out, background .3s ease-in;
+  -ms-transition:color .3s ease-out, background .3s ease-in;
+  -moz-transition:color .3s ease-out, background .3s ease-in;
+  -webkit-transition:color .3s ease-out, background .3s ease-in;
+	transition:color .3s ease-out, background .3s ease-in;
+
+}
+
+
+.instagram, .fb{
+	background:lightgrey;
+	opacity: 0.8;
 }
 
 

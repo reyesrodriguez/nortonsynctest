@@ -40,7 +40,7 @@ class ArtistsController < ApplicationController
 
 
 	def destroy
-		@arist = Artist.find params[:id]
+		@artist = Artist.find params[:id]
 		@artist.destroy
 
 		flash.notice = "song '#{@artist.name}' was deleted"
