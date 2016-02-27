@@ -3,15 +3,15 @@
 		<div class="col-md-8 col-md-offset-2">
 			<%=form_for User.new do |f| %>
 
-			<%=f.label :name %>
+			<h3><%=f.label :name %></h3>
 
 			<%=f.text_field :name %>
 
-			<%=f.label :password %>
+			<h3><%=f.label :password %></h3>
 
 			<%=f.password_field :password %>
 
-			<%=f.label :password_confirmation %>
+			<h3><%=f.label :password_confirmation %></h3>
 
 			<%=f.password_field :password_confirmation %>
 

@@ -1,3 +1,19 @@
 // Place all the styles related to the synch controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.cover-header h1::after{
+	border-bottom: 1px solid #CCC8C8;
+	height: 1px;
+	margin:1.5rem auto 1rem;
+	width: 9rem;
+	content: '';
+	display:block;
+}
+.cover-header p {
+	color: #CCC8C8;
+	margin:0 auto;
+	max-width: 60rem;
+	text-align: center;
+}

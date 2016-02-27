@@ -1,16 +1,16 @@
 
 
 	<div class="row">
-		<h1>Please Log In</h1>
-		<div class="col-md-12 col-md-offset-4">
 		
+		<div class="col-md-12 col-md-offset-4">
+			<h2>Please Log In</h2>
 			<%=form_tag log_in_path do%>
 
-			<%=label_tag :name %>
+			<h3><%=label_tag :name %></h3>
 
 			<%=text_field_tag :name %>
 
-			<%=label_tag :password %>
+			<h3><%=label_tag :password %></h3>
 
 			<%=password_field_tag :password %>
 

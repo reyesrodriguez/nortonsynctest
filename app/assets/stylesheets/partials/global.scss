@@ -1,7 +1,15 @@
-@import url(https://fonts.googleapis.com/css?family=Lato:700,900);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+$font-stack: 'Open Sans', sans-serif;
 
 body > .container {
   padding: 5px 15px 0;
+
+}
+
+body, html{
+	font-size: 62.5%;
+	font-family: 100% $font-stack;
 }
 
 
