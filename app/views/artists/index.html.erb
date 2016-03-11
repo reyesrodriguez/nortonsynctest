@@ -1,22 +1,27 @@
-
+<div class="container-fluid">
 	<div class="row">
 		<div class="col-md-8 col-md-offset-2">
-			<h1>Music</h1>
+			<div class="cover-content">
+				<div class="cover-header">
+					<h1 class="header-synch">MUSIC</h1>
  <%if current_user %>
  	<button><%= link_to "Add new Artist", new_artist_path %></button>
  	<button><%=link_to "Logout", :controller => 'sessions', :action => 'destroy' %></button>
  <% end %>
 		<br>	
-		<div class="gallery">
-			<% @artist.each do |a| %>
-				<div class="groups">
-					<h3 class="name"><%= a.name %></h3>
+				<div class="gallery">
+				<% @artist.each do |a| %>
+						<div class="groups">
+								<h3 class="name"><%= a.name %></h3>
 
-				<div class="item">
-					<a href='/artists/<%=a.id%>'><%= image_tag a.image.url(:med) %>
+							<div class="item">
+								<a href='/artists/<%=a.id%>'><%= image_tag a.image.url(:med) %>
+							</div>
+						</div>
+					<% end %>
+					</div>
 				</div>
-				</div>
-				<% end %>
 			</div>
 		</div>
 	</div>
+</div>

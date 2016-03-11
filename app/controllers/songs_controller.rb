@@ -47,7 +47,7 @@ end
  	@song = Song.find params[:id]
  	@song.destroy
  	
- 	flash.notice="Song '#{@song.title}' by '#{@song.artist}' was deleted"
+ 	flash[:alert]="Song '#{@song.title}' by '#{@song.artist}' was deleted"
 
  	redirect_to songs_path
  end

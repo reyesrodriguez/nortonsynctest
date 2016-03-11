@@ -1,0 +1,22 @@
+.gallery {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-content: flex-start; }
+
+.item {
+  margin: 1em;
+  height: 250px;
+  width: 250px;
+  border: 5px solid #F4C87C;
+  background-color: #F1B64D; }
+
+.item > a:hover {
+  opacity: 0.8; }
+
+.name {
+  color: #1D1D1D;
+  text-align: center; }
+
+/*# sourceMappingURL=artists.css.map */

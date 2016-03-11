@@ -1,25 +1,17 @@
+<div class="container">
 
 	<div class="row">
 
-		<div class="col-md-8 col-md-offset-2">
-			<div class="logout">
-			<% if current_user %>
-				<button><%=link_to "Logout", :controller => 'sessions', :action => 'destroy' %></button>
-			<% else %>
-			<%=link_to "Log-in", :controller => 'sessions', :action => 'create' %>
-			<% end %>
-			</div>
-		</div>
-		<div class="col-md-8 col-md-offset-2">
+		<div class="col-md-12 songlist-page">
  			<%= form_tag songs_path, :method => "get" do %>
-				<label for="search-by">Search By</label>
-					<select name="search_by" id="search-by">
+				<h3><label for="search-by">Search By</label></h3>
+					<h4><select name="search_by" id="search-by">
 						<option value="title">Title</option>
 						<option value="writer">Writer</option>
 						<option value="artist">Artist</option>
 						<option value="publisher">Publisher</option>
 						<option value="theme">Theme</option>
-					</select>
+					</select></h4><br>
 			<%= text_field_tag :search, params[:search], class: "form-control"%><br>
 			<%= submit_tag "Search", class: "btn btn-primary" %>
 	  	<% end %>
@@ -27,40 +19,40 @@
 			<% if @songs.present? %>
   			<%= render @songs %>
 			<% else %>
-  		<p>There are no songs containing the term(s) <%= params[:search] %>.</p>
+  		<p class="hidden">There are no songs containing the term(s) <%= params[:search] %>.</p>
 			<% end %>
 
 	
 			<table>
-			<tr>
-			<th><h5> title </h5></th>
-			<th><h5> artist </h5></th>
-			<th><h5> writer </h5></th>
-			<th><h5> publisher </h5></th>
-			<th><h5> theme </h5></th>
+			<tr class="title-header">
+			<th><h3> title </h3></th>
+			<th><h3> artist </h3></th>
+			<th><h3> writer </h3></th>
+			<th><h3> publisher </h3></th>
+			<th><h3> theme </h3></th>
 			</tr>
 
 			<% @songs.each do |song| %>
-			<tr>
+			<tr class="title-header">
 			<td><%= song.title %></td>
 			<td><%= song.artist %></td>
 			<td><%= song.writer %></td>
 			<td><%= song.publisher %></td>
 			<td><%= song.theme %></td>
-			<td><button><%= link_to 'Show', song_path(song) %></button></td>
-      <td><button><%= link_to 'Update', edit_song_path(song) %></button></td>
+			<td><button class="button button-show"><%= link_to 'Show', song_path(song) %></button></td>
+      <td><button class="button button-update"><%= link_to 'Update', edit_song_path(song) %></button></td>
 			</tr>
 			<% end %>
 			</table>
-			<button><%= link_to 'Add Song', new_song_path %></button>
+			<button class="button button-primary"><%= link_to 'Add Song', new_song_path %></button>
 
 			<hr>
 
 			<div class="admin_talent">
-				<button><%= link_to "Add new Artist", new_artist_path %></button>
-
+				<h2>Add a new artist to the Music page!</h2>
+				<button class="button button-primary"><%= link_to "New Artist", new_artist_path %></button>
 			</div>
+			<br>
 			</div><!--end of table div -->
 		</div><!--end of div -->
 	</div><!--end of row -->
-

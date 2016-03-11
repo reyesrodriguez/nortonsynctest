@@ -1,0 +1,44 @@
+.navbar {
+	border: none;
+	box-shadow: none;
+	border-radius: 1px;
+	background:#1D1D1D;
+	box-shadow: 4px 2px 8px #888888 ;
+}
+
+.navbar-default .navbar-nav>li>a {
+	color:white;
+	font-size: 1.5rem;
+	height:62px;
+}
+
+#menu>li:hover{
+	background: white;
+	color:black;
+	-o-transition:color .3s ease-out, background .3s ease-in;
+  	-ms-transition:color .3s ease-out, background .3s ease-in;
+  -moz-transition:color .3s ease-out, background .3s ease-in;
+  -webkit-transition:color .3s ease-out, background .3s ease-in;
+	transition:color .3s ease-out, background .3s ease-in;
+}
+
+.dropdown-menu>li{
+	color:black;
+}
+
+
+.instagram, .fb{
+	background:lightgrey;
+	opacity: 0.8;
+}
+
+.logout {
+	
+}
+
+/*.nav{
+	padding-left: 320px;
+}
+*/
+
+

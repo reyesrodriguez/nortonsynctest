@@ -1,12 +1,16 @@
-@import "partials/global";
-@import "partials/pages";
-@import "partials/contact";
-@import "partials/footer";
-@import "partials/navigation";
 
+@import "utilities/variables";
 
+@import "components/buttonnavigation";
 
+@import "pages/global";
+@import "pages/artists";
+@import "pages/songs";
+@import "pages/synch";
+@import "pages/home";
+@import "pages/catalogs";
+@import "pages/licensing";
+@import "pages/contact";
 
-
-
-
+@import "layout/footer";
+@import "layout/navigation";

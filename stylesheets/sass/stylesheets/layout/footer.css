@@ -1,0 +1,38 @@
+html {
+  position: relative;
+  min-height: 100%; }
+
+body {
+  /*margin bottom by footer height*/
+  margin-bottom: 180px; }
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 180px;
+  background-color: #f7e37d; }
+
+/********** footer content **************/
+.content {
+  height: 100px; }
+
+.wrap {
+  margin: 0 auto;
+  padding-top: 20px; }
+
+.text {
+  font-size: 1.3rem;
+  text-align: center;
+  color: #502F0C;
+  opacity: 0.7; }
+
+.info-footer {
+  display: inline-block;
+  padding-right: 10px; }
+
+@media only screen and (max-width: 800px) {
+  .content {
+    height: 50px; } }
+
+/*# sourceMappingURL=footer.css.map */

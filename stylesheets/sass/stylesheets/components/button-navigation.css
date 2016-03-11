@@ -1,0 +1,58 @@
+/*
+Error: Invalid CSS after "  ": expected "{", was "}"
+        on line 11 of app/assets/stylesheets/components/button-navigation.scss
+
+6:   user-select: none;
+7:   border-radius: $button-size/7;
+8:  
+9:   &:hover {
+10:     opacity: 1;
+11:   }
+12:  
+13:   &:active {
+14:     transition: 0;
+15:     background: rgba(0,0,0,.1);
+16:   }
+
+Backtrace:
+app/assets/stylesheets/components/button-navigation.scss:11
+/Users/miriamlinna/.rvm/gems/ruby-2.3.0/gems/sass-3.4.21/lib/sass/scss/parser.rb:1179:in `expected'
+/Users/miriamlinna/.rvm/gems/ruby-2.3.0/gems/sass-3.4.21/lib/sass/scss/parser.rb:1115:in `expected'
+/Users/miriamlinna/.rvm/gems/ruby-2.3.0/gems/sass-3.4.21/lib/sass/scss/parser.rb:1110:in `tok!'
+/Users/miriamlinna/.rvm/gems/ruby-2.3.0/gems/sass-3.4.21/lib/sass/scss/parser.rb:654:in `block'
+/Users/miriamlinna/.rvm/gems/ruby-2.3.0/gems/sass-3.4.21/lib/sass/scss/parser.rb:724:in `declaration_or_ruleset'
+/Users/miriamlinna/.rvm/gems/ruby-2.3.0/gems/sass-3.4.21/lib/sass/scss/parser.rb:674:in `block_child'
+/Users/miriamlinna/.rvm/gems/ruby-2.3.0/gems/sass-3.4.21/lib/sass/scss/parser.rb:666:in `block_contents'
+/Users/miriamlinna/.rvm/gems/ruby-2.3.0/gems/sass-3.4.21/lib/sass/scss/parser.rb:655:in `block'
+/Users/miriamlinna/.rvm/gems/ruby-2.3.0/gems/sass-3.4.21/lib/sass/scss/parser.rb:724:in `declaration_or_ruleset'
+/Users/miriamlinna/.rvm/gems/ruby-2.3.0/gems/sass-3.4.21/lib/sass/scss/parser.rb:674:in `block_child'
+/Users/miriamlinna/.rvm/gems/ruby-2.3.0/gems/sass-3.4.21/lib/sass/scss/parser.rb:666:in `block_contents'
+/Users/miriamlinna/.rvm/gems/ruby-2.3.0/gems/sass-3.4.21/lib/sass/scss/parser.rb:655:in `block'
+/Users/miriamlinna/.rvm/gems/ruby-2.3.0/gems/sass-3.4.21/lib/sass/scss/parser.rb:647:in `ruleset'
+/Users/miriamlinna/.rvm/gems/ruby-2.3.0/gems/sass-3.4.21/lib/sass/scss/parser.rb:673:in `block_child'
+/Users/miriamlinna/.rvm/gems/ruby-2.3.0/gems/sass-3.4.21/lib/sass/scss/parser.rb:663:in `block_contents'
+/Users/miriamlinna/.rvm/gems/ruby-2.3.0/gems/sass-3.4.21/lib/sass/scss/parser.rb:123:in `stylesheet'
+/Users/miriamlinna/.rvm/gems/ruby-2.3.0/gems/sass-3.4.21/lib/sass/scss/parser.rb:39:in `parse'
+/Users/miriamlinna/.rvm/gems/ruby-2.3.0/gems/sass-3.4.21/lib/sass/engine.rb:403:in `_to_tree'
+/Users/miriamlinna/.rvm/gems/ruby-2.3.0/gems/sass-3.4.21/lib/sass/engine.rb:378:in `_render_with_sourcemap'
+/Users/miriamlinna/.rvm/gems/ruby-2.3.0/gems/sass-3.4.21/lib/sass/engine.rb:295:in `render_with_sourcemap'
+/Users/miriamlinna/.rvm/gems/ruby-2.3.0/gems/sass-3.4.21/lib/sass/plugin/compiler.rb:490:in `update_stylesheet'
+/Users/miriamlinna/.rvm/gems/ruby-2.3.0/gems/sass-3.4.21/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/Users/miriamlinna/.rvm/gems/ruby-2.3.0/gems/sass-3.4.21/lib/sass/plugin/compiler.rb:209:in `each'
+/Users/miriamlinna/.rvm/gems/ruby-2.3.0/gems/sass-3.4.21/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/Users/miriamlinna/.rvm/gems/ruby-2.3.0/gems/sass-3.4.21/lib/sass/plugin/compiler.rb:293:in `watch'
+/Users/miriamlinna/.rvm/gems/ruby-2.3.0/gems/sass-3.4.21/lib/sass/plugin.rb:109:in `method_missing'
+/Users/miriamlinna/.rvm/gems/ruby-2.3.0/gems/sass-3.4.21/lib/sass/exec/sass_scss.rb:383:in `watch_or_update'
+/Users/miriamlinna/.rvm/gems/ruby-2.3.0/gems/sass-3.4.21/lib/sass/exec/sass_scss.rb:51:in `process_result'
+/Users/miriamlinna/.rvm/gems/ruby-2.3.0/gems/sass-3.4.21/lib/sass/exec/base.rb:52:in `parse'
+/Users/miriamlinna/.rvm/gems/ruby-2.3.0/gems/sass-3.4.21/lib/sass/exec/base.rb:19:in `parse!'
+/Users/miriamlinna/.rvm/gems/ruby-2.3.0/gems/sass-3.4.21/bin/sass:13:in `<top (required)>'
+/Users/miriamlinna/.rvm/gems/ruby-2.3.0/bin/sass:23:in `load'
+/Users/miriamlinna/.rvm/gems/ruby-2.3.0/bin/sass:23:in `<main>'
+/Users/miriamlinna/.rvm/gems/ruby-2.3.0/bin/ruby_executable_hooks:15:in `eval'
+/Users/miriamlinna/.rvm/gems/ruby-2.3.0/bin/ruby_executable_hooks:15:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"  \": expected \"{\", was \"}\"\A         on line 11 of app/assets/stylesheets/components/button-navigation.scss\A \A 6:   user-select: none;\A 7:   border-radius: $button-size/7;\A 8:  \A 9:   &:hover {\A 10:     opacity: 1;\A 11:   }\A 12:  \A 13:   &:active {\A 14:     transition: 0;\A 15:     background: rgba(0,0,0,.1);\A 16:   }"; }

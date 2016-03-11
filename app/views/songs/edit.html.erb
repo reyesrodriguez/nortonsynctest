@@ -1,18 +1,23 @@
+<div class="container">
+
 <div class="row">
-	 <div class="col-md-10 col-md-offset-4">
-	 	<div class="edit-form">
+	 <div class="col-md-4 col-md-offset-3 boxform">
 	 		<h3>Update Song</h3>
 				<%= form_for @song, url: {action: "update"}, html: {class:"update-form"} do |s| %>
 					<h4>Title</h4>
-					<%= s.text_field :title, :size => 30, :placeholder => "Enter Title"  %>
+					<h4><%= s.text_field :title, :size => 25, :placeholder => "Enter Title"  %></h4>
 					<h4>Artist</h4>
-					<%= s.text_field :artist, :size => 30, :placeholder => "Enter Artist"  %>
-					<h4>Catalog</h4><%= s.text_field :catalogue, :size => 30, :placeholder => "Enter Catalogue Number"  %>
-					<h4>Writer</h4><%= s.text_field :writer, :size => 30, :placeholder => "Enter Writer"  %>
-					<h4>Publisher</h4><%= s.text_field :publisher, :size => 30, :placeholder => "Enter Publisher"  %>
-					<h4>Theme</h4><%= s.text_field :theme, :size => 30, :placeholder => "Enter theme, sound a like etc..."  %><br><br>
-				<%= s.submit "Create" %>
+					<h4><%= s.text_field :artist, :size => 25, :placeholder => "Enter Artist"  %></h4>
+					<h4>Catalog</h4>
+					<h4><%= s.text_field :catalogue, :size => 25, :placeholder => "Enter Catalogue Number"  %></h4>
+					<h4>Writer</h4>
+					<h4><%= s.text_field :writer, :size => 25, :placeholder => "Enter Writer"  %></h4>
+					<h4>Publisher</h4>
+					<h4><%= s.text_field :publisher, :size => 25, :placeholder => "Enter Publisher"  %></h4>
+					<h4>Theme</h4>
+					<h4><%= s.text_field :theme, :size => 25, :placeholder => "Enter theme, sound a like etc..."  %></h4><br>
+				<h3 class="custom-bt"><%= s.submit "Create" %></h3>
 				<%end%>
-			</div>
 		</div>
  </div>
+</div>

@@ -1,0 +1,28 @@
+
+
+h3 {
+	text-align: center;			
+	font-size: 2rem;
+	font-weight:600;
+	letter-spacing:1px;
+	color:$h3-color;
+	
+}
+
+.home-services h3::after{
+	height: 1px;
+	margin:1.5rem auto 1rem;
+	width: 5rem;
+	content: '';
+	display:block;
+}
+.home-services p {
+	color: $p_color;
+	margin:0 auto;
+	letter-spacing:.2rem;
+	max-width:35rem;
+	font-size: 1.7rem;
+	line-height:1.8;
+	text-align:center;
+}
+

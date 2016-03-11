@@ -1,0 +1,39 @@
+/*********catalogs flex box gallery*****************/
+.galeria {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center; }
+
+.catalog {
+  margin: 1em;
+  height: 300px;
+  width: 300px;
+  margin-bottom: 20px; }
+
+/*.uno {
+	
+	background: image-url('long.jpg') no-repeat;
+}
+.dos{
+	
+	background: image-url('onyx.jpg') no-repeat;
+}*/
+.nombre {
+  text-align: center;
+  /*border-bottom: 3px solid darkred;
+  width: 10rem;
+  margin: 1rem auto ;
+  line-height: 1.333;*/ }
+
+/*********catalogs label info*****************/
+.record-label {
+  text-align: center; }
+
+.record-label {
+  /*border-bottom: 3px solid black;
+  width: 9rem;
+  margin: 1rem auto 3rem;*/ }
+
+/*# sourceMappingURL=catalogs.css.map */

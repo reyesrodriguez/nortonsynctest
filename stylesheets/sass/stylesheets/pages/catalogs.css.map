@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AACA,qDAAqD;AACrD,QAAS;EACR,OAAO,EAAC,IAAI;EACZ,cAAc,EAAE,GAAG;EACnB,eAAe,EAAE,YAAY;EAC7B,SAAS,EAAE,IAAI;EACf,WAAW,EAAC,MAAM;;AAGnB,QAAS;EACR,MAAM,EAAE,GAAG;EACX,MAAM,EAAE,KAAK;EACb,KAAK,EAAE,KAAK;EACZ,aAAa,EAAC,IAAI;;AAGnB;;;;;;;GAOG;AACH,OAAO;EACN,UAAU,EAAE,MAAM;EAClB;;;uBAGqB;;AAGtB,+CAA+C;AAK/C,aAAc;EACb,UAAU,EAAE,MAAM;;AAEnB,aAAa;EACZ;;2BAEyB",
+"sources": ["../../../../app/assets/stylesheets/pages/catalogs.scss"],
+"names": [],
+"file": "catalogs.css"
+}

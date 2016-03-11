@@ -1,0 +1,61 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:800,300,600);
+
+
+body > .container {
+  padding: 5px 15px 0;
+
+
+}
+
+body, html{
+	font-size: 62.5%;
+	font-family: 100% $font-stack;
+	-webkit-font-smoothing: antialiased;
+	 background-color: #f7f7f7;
+	
+}
+
+.cover-header h1::after{
+	@include afterheading-styles()
+}
+
+
+.cover-header p {
+	@include paragraph-styles();
+}
+
+
+
+h1 {
+	text-align: center;			
+	font-size: 4rem;
+	font-weight:800;
+	letter-spacing:1px;
+	color:$h1-color;
+	
+}
+
+
+
+a:link, a:visited {
+	color:black;
+	text-decoration: none;
+}
+a:hover, a:active {
+	text-decoration: none;
+}
+
+a:focus {
+    outline: 0;
+}
+
+
+.header {
+	text-align:center;
+}
+
+.img{
+	width:100%;
+	height: auto;
+}
+
