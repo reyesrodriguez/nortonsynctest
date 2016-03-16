@@ -8,7 +8,7 @@ class UsersController < ApplicationController
 
 		@user = User.new(user_params)
 		if @user.save
-			flash[:success] = "Welcome to Norton catalog " + @current_user.name + "!"
+			flash[:success] = "Welcome to Norton catalog ", @user.name 
 			redirect_to '/songs'
 		else
 			flash[:error] = "There was a problem. Please try again"
