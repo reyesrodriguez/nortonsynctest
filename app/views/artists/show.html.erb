@@ -7,8 +7,8 @@
 		</div>
 		<%= audio_tag @artist.song, :type => "mp3/audio", :controls => true, :autoplay => true %>
 			</div>
-
-			<div>
+		</div>
+			<div class="col-md-8 col-md-offset-2">
 		<% if current_user%>	
 		 <button><%= link_to 'Update', edit_artist_path(@artist) %></button>
 		 
@@ -18,6 +18,5 @@
               data: { confirm: 'Are you sure? This cannot be undone!' } %></button>
      <% end %>
       </div>
-	 </div>
  </div>
 </div>

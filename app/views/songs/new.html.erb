@@ -1,21 +1,21 @@
 <div class="container">
 
 <div class="row">
-	 <div class="col-md-10 col-md-offset-4">
-	 	 <div class="new-form">
-	 	  <h3>New Song</h3>
+	 <div class="col-md-10 col-md-offset-4 boxform">
+	 	 
 			<%= form_for @song, url: {action: "create"}, html: {class:"new-form"} do |s| %>
-				<h4>Title</h4>
-				<%= s.text_field :title, :size => 30, :placeholder => "Enter Title"  %>
-				<h4>Artist</h4>
-				<%= s.text_field :artist, :size => 30, :placeholder => "Enter Artist"  %>
-				<h4>Catalog</h4><%= s.text_field :catalogue, :size => 30, :placeholder => "Enter Catalogue Number"  %>
-				<h4>Writer</h4><%= s.text_field :writer, :size => 30, :placeholder => "Enter Writer"  %>
-				<h4>Publisher</h4><%= s.text_field :publisher, :size => 30, :placeholder => "Enter Publisher"  %>
-				<h4>Theme</h4><%= s.text_field :theme, :size => 30, :placeholder => "Enter theme, sound a like etc..."  %><br><br>
-				<%= s.submit "Create" %>
+			<h2>New Song</h2>
+				<h3 class="boxform">Title</h3>
+				<%= s.text_field :title, :size => 50, :placeholder => "Enter Title"  %>
+				<h3 class="boxform">Artist</h3>
+				<%= s.text_field :artist, :size => 50, :placeholder => "Enter Artist"  %>
+				<h3 class="boxform">Catalog</h3><%= s.text_field :catalogue, :size => 50, :placeholder => "Enter Catalogue Number"  %>
+				<h3 class="boxform">Writer</h3><%= s.text_field :writer, :size => 50, :placeholder => "Enter Writer"  %>
+				<h3 class="boxform">Publisher</h3><%= s.text_field :publisher, :size => 50, :placeholder => "Enter Publisher"  %>
+				<h3 class="boxform">Theme</h3><%= s.text_field :theme, :size => 50, :placeholder => "Enter theme, sound a like etc..."  %><br><br>
+				<%= s.submit "Create" %><br><br>
 				<%end%>
 			</div>
-		</div>
+		
  </div>
 </div>

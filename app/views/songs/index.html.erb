@@ -1,8 +1,29 @@
+
+<div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="#" class="dashboard">
+                        Dashboard
+                    </a>
+                </li>
+                <li class="sidebar-options">
+                    <%= link_to 'Add Song', new_song_path %>
+                </li>
+                <li class="sidebar-options">
+                    <%= link_to "Add New Artist", new_artist_path %>
+                </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
 <div class="container">
-
 	<div class="row">
-
 		<div class="col-md-12 songlist-page">
+			<a href="#menu-toggle" class="btn btn-default" id="menu-toggle"><i class="fa fa-caret-left "></i> Dashboard Menu </a>
+
  			<%= form_tag songs_path, :method => "get" do %>
 				<h3><label for="search-by">Search By</label></h3>
 					<h4><select name="search_by" id="search-by">
@@ -12,47 +33,42 @@
 						<option value="publisher">Publisher</option>
 						<option value="theme">Theme</option>
 					</select></h4><br>
-			<%= text_field_tag :search, params[:search], class: "form-control"%><br>
-			<%= submit_tag "Search", class: "btn btn-primary" %>
-	  	<% end %>
+				<%= text_field_tag :search, params[:search], class: "form-control"%><br>
+				<%= submit_tag "Search", class: "btn btn-primary" %>
+	  		<% end %>
 
 			<% if @songs.present? %>
-  			<%= render @songs %>
+  				<%= render @songs %>
 			<% else %>
-  		<p class="hidden">There are no songs containing the term(s) <%= params[:search] %>.</p>
+  				<p class="hidden">There are no songs containing the term(s) <%= params[:search] %>.</p>
 			<% end %>
 
-	
-			<table>
-			<tr class="title-header">
-			<th><h3> title </h3></th>
-			<th><h3> artist </h3></th>
-			<th><h3> writer </h3></th>
-			<th><h3> publisher </h3></th>
-			<th><h3> theme </h3></th>
-			</tr>
+			<div class="table-responsive">
+				<table class="table-hover table-condensed">
+					<tr class="title-header">
+						<th><h3> Title </h3></th>
+						<th><h3> Artist </h3></th>
+						<th><h3> Writer </h3></th>
+						<th><h3> Publisher </h3></th>
+						<th><h3> Theme </h3></th>
+						</tr>
 
-			<% @songs.each do |song| %>
-			<tr class="title-header">
-			<td><%= song.title %></td>
-			<td><%= song.artist %></td>
-			<td><%= song.writer %></td>
-			<td><%= song.publisher %></td>
-			<td><%= song.theme %></td>
-			<td><button class="button button-show"><%= link_to 'Show', song_path(song) %></button></td>
-      <td><button class="button button-update"><%= link_to 'Update', edit_song_path(song) %></button></td>
-			</tr>
-			<% end %>
-			</table>
-			<button class="button button-primary"><%= link_to 'Add Song', new_song_path %></button>
-
-			<hr>
-
-			<div class="admin_talent">
-				<h2>Add a new artist to the Music page!</h2>
-				<button class="button button-primary"><%= link_to "New Artist", new_artist_path %></button>
-			</div>
-			<br>
+						<% @songs.each do |song| %>
+						<tr class="title-header">
+						<td><%= song.title %></td>
+						<td><%= song.artist %></td>
+						<td><%= song.writer %></td>
+						<td><%= song.publisher %></td>
+						<td><%= song.theme %></td>
+						<td><button class="button button-show"><%= link_to 'Show', song_path(song) %></button></td>
+      					<td><button class="button button-update"><%= link_to 'Update', edit_song_path(song) %></button></td>
+					</tr>
+						<% end %>
+				</table><br><br>
+		
 			</div><!--end of table div -->
 		</div><!--end of div -->
 	</div><!--end of row -->
+</div>
+</div>
+

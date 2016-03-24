@@ -22,10 +22,10 @@
        <ul class="nav navbar-nav navbar-right" id="menu">
         <li class="menu"><a href="/">Home</a></li>
         <% if current_user %>
-        <li class="logout"><a href="">Hello, <%= current_user.name.capitalize %></a></li>
+        <li class="logout"><a href=""><%= current_user.name.capitalize %></a></li>
         <li class="menu"> 
-          <%=link_to "Logout", :controller => 'sessions', :action => 'destroy' %><%= @username %></li>
-          <li><%= link_to 'Dashboard', songs_path %></li>
+          <%=link_to '<i class="fa fa-sign-out fa-2x"></i>'.html_safe, :controller => 'sessions', :action => 'destroy' %><%= @username %></li>
+          <li><%= link_to '<i class="fa fa-tachometer fa-2x"></i>'.html_safe, songs_path %></li>
       <% end %>
       </ul>
     </div><!-- /.navbar-collapse -->

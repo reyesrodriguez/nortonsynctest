@@ -1,26 +1,26 @@
 <div class="container">
 
 	<div class="row">
-		<div class="col-md-8 col-md-offset-2">
+		<div class="col-md-10 col-md-offset-4 boxform">
 			<%=form_for User.new do |f| %>
 
-			<h3><%=f.label :name %></h3>
+			<h3 class="boxform"><%=f.label :name %></h3>
 
-			<%=f.text_field :name %>
+			<%=f.text_field :name, :size => 50, :placeholder => "Enter Name" %>
 
-			<h3><%=f.label :email %></h3>
+			<h3 class="boxform"><%=f.label :email %></h3>
 
-			<%=f.text_field :email %>
+			<%=f.text_field :email, :size => 50, :placeholder => "Enter Email" %>
 
-			<h3><%=f.label :password %></h3>
+			<h3 class="boxform"><%=f.label :password %></h3>
 
-			<%=f.password_field :password %>
+			<%=f.password_field :password, :size => 50, :placeholder => "Enter Password" %>
 
-			<h3><%=f.label :password_confirmation %></h3>
+			<h3 class="boxform"><%=f.label :password_confirmation %></h3>
 
-			<%=f.password_field :password_confirmation %>
+			<%=f.password_field :password_confirmation, :size => 50, :placeholder => "Confirm Password" %><br><br>
 
-			<%=f.submit "Sign Up" %>
+			<%=f.submit "Sign Up" %><br><br>
 
 			<%end%>
 		</div>

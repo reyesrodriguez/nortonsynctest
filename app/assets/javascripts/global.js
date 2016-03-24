@@ -9,6 +9,11 @@ window.log = function f(){ log.history = log.history || []; log.history.push(arg
 
 
 // place any jQuery/helper plugins in here, instead of separate, slower script files.
+$("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+
 
 setTimeout(function(){
 	$('#flash').fadeOut();
@@ -17,4 +22,5 @@ setTimeout(function(){
  document.querySelector( "#nav-toggle" ).addEventListener( "click", function() {
   this.classList.toggle( "active" );
 });
+
 });

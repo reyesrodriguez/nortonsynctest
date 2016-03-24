@@ -4,11 +4,12 @@
 			<div class="cover-content">
 				<div class="cover-header">
 					<h1 class="header-synch">MUSIC</h1>
- <%if current_user %>
- 	<button><%= link_to "Add new Artist", new_artist_path %></button>
- 	<button><%=link_to "Logout", :controller => 'sessions', :action => 'destroy' %></button>
- <% end %>
-		<br>	
+					<div class="mini-dashboard">
+ 						<%if current_user %>
+ 							<button><%= link_to "Add new Artist", new_artist_path %></button>
+ 							<button><%=link_to "Logout", :controller => 'sessions', :action => 'destroy' %></button>
+ 						<% end %>
+ 					</div><br>	
 				<div class="gallery">
 				<% @artist.each do |a| %>
 						<div class="groups">
