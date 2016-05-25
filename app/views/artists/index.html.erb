@@ -10,9 +10,9 @@
  							<button><%=link_to "Logout", :controller => 'sessions', :action => 'destroy' %></button>
  						<% end %>
  					</div><br>	
-				<div class="gallery">
-				<% @artist.each do |a| %>
-						<div class="groups">
+					<div class="gallery">
+					<% @artist.each do |a| %>
+							<div class="groups">
 								<h3 class="name"><%= a.name %></h3>
 
 							<div class="item">

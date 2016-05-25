@@ -3,6 +3,7 @@ class SongsController < ApplicationController
 		
 
  def index
+ 	@songs = Song.page(params[:page])
  	@songs = Song.all
  		if params[:search]
  	@songs = Song.search(params[:search])
@@ -54,9 +55,8 @@ end
 
  private
  	def song_params
- 		params.require(:song).permit(:title, :artist, :catalogue, :writer, :publisher, :theme)
+ 		params.require(:song).permit(:title, :artist, :writer, :publisher, :theme)
  	end
-
 
 
 

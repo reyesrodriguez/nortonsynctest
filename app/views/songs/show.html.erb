@@ -22,11 +22,12 @@
 			</table>
 
 			<button><%= link_to 'Update', edit_song_path(@song) %></button>
-			<button><%= link_to 'Song List', songs_path %></button>
 
 			<button><%= link_to 'Destroy', song_path(@song),
               method: :delete,
               data: { confirm: 'Are you sure? This cannot be undone!' } %></button>
+
+            <button><%= link_to 'Back To Dashboard', songs_path %></button>
 	 </div>
  </div>
 </div>

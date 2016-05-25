@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:800,300,600);
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700,500,300,100,100italic);
 
 
 body > .container {
@@ -23,6 +23,16 @@ body, html{
 .cover-header p {
 	@include paragraph-styles();
 }
+
+.home-header h1::after{
+	@include afterheading-styles()
+}
+
+
+.home-header p {
+	@include paragraph-styles();
+}
+
 
 input{
     height: 25px;

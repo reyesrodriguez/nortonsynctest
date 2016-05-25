@@ -11,4 +11,13 @@ class CreateSongs < ActiveRecord::Migration
       t.timestamps null: false
     end
   end
+
+
+require 'csv'
+
+def self.import(file)
+  CSV.foreach("norton.csv", :headers => true) do |row|
+    Songs.create!(row.to_hash)
+  end
+end
 end

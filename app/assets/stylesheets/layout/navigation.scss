@@ -2,8 +2,9 @@
 	border: none;
 	box-shadow: none;
 	border-radius: 1px;
-	background:#1D1D1D;
-	box-shadow: 4px 2px 8px #888888 ;
+	background:#000000;
+	box-shadow: 4px 2px 8px #888888;
+    margin-bottom:0px;
 }
 
 .navbar-default .navbar-nav>li>a {
@@ -13,7 +14,7 @@
 }
 
 #menu>li:hover{
-	background: white;
+	background:#FAFAFA;
 	color:black;
 	-o-transition:color .3s ease-out, background .3s ease-in;
   	-ms-transition:color .3s ease-out, background .3s ease-in;
@@ -157,5 +158,11 @@
     #wrapper.toggled #page-content-wrapper {
         position: relative;
         margin-right: 0;
+    }
+}
+
+@media(max-width:768px) {
+    .navbar{
+        margin-bottom:0px;
     }
 }
