@@ -11,7 +11,7 @@ h3 {
 
 .home-header{
 	background-color:#FFAB91;
-	height:500px;
+	height:600px;
 } 
 
 .header-synch{
@@ -23,7 +23,7 @@ h3 {
 
 .services{
 	padding:25px;
-	height:520px;
+	height:600px;
 	background-color:#FAFAFA;
 }
 
@@ -52,7 +52,7 @@ h3 {
 	}
    .home-services h3::after{
 	height: 1px;
-	margin:1.5rem auto 1rem;
+	margin:1rem auto 1rem;
 	width: 2rem;
 	content: '';
 	display:block;
@@ -61,7 +61,7 @@ h3 {
 	color: $p_color;
 	margin:0 auto;
 	letter-spacing:.2rem;
-	max-width:35rem;
+	max-width:70rem;
 	font-size: 1.2rem;
 	line-height:1;
 	text-align:center;
