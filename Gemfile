@@ -4,7 +4,7 @@ ruby '2.3.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5.1'
 # Use postgresql as the database for Active Record
-gem 'pg', '~> 0.15'
+gem 'pg'
 # Use SCSS for stylesheets
 gem 'sass'
 gem 'bootstrap-sass', '~> 3.3.6'
@@ -25,10 +25,10 @@ gem 'jquery-turbolinks', '~> 2.1'
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
-
+gem 'devise'
 gem 'mail_form'
 gem 'simple_form'
-
+gem 'will_paginate', '~> 3.1.0'
 gem 'aws-sdk', '~> 1.5.7' # amazon web services gem
 gem 'paperclip'     # paperclip gem for file management
 gem 'dotenv-rails', :groups => [:development, :test]  # env variable to keep sensitive data hidden
@@ -38,7 +38,7 @@ gem 'passenger', '>= 5.0.25', require: 'phusion_passenger/rack_handler'
 gem 'bcrypt', '~> 3.1.10'
 # Use Unicorn as the app server
 # gem 'unicorn'
-gem "kaminari"
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
@@ -61,4 +61,4 @@ end
 
 gem 'rails_12factor', group: :production
 
-gem 'devise'
+

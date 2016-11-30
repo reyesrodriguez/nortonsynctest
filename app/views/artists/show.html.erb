@@ -1,37 +1,36 @@
 <div class="container">
-<div class="row">
-	 <div class="col-md-8 col-md-offset-2">
-	 	<div>
-			<h2 class="artist-name"><%= @artist.name %></h2>
-		</div>
-		<div class="col-md-6">
-			<div class="item artist-image"><%= image_tag @artist.image.url(:med) %>
-		</div>
+	<div class="row">
+		 <div class="col-md-12">
+		 	<div>
+				<h2 class="artist-name"><%= @artist.name %></h2>
+			</div>
+			<div class="col-md-6">
+				<div class="item artist-image"><%= image_tag @artist.image.url(:med) %>
+				</div>
+				<div class="artist-player">
+			<%= audio_tag @artist.song, :type => "mp3/audio", :controls => true, :autoplay => true %>
+			</div>
 
-	</div>
+			</div>
 
-		<div class="col-md-6">
+			<div class="col-md-6 artist-bio">
 				<div class="artist-biography"><%= @artist.biography %>
 				</div>
 
+			</div>
 		</div>
-		</div>
-		<div class="col-md-12">
-		<div>
-		<%= audio_tag @artist.song, :type => "mp3/audio", :controls => true, :autoplay => true %>
-		</div>
-	</div>
+	
 
 	</div>
-			<div class="col-md-8 col-md-offset-2">
-		<% if current_user%>	
-		 <button><%= link_to 'Update', edit_artist_path(@artist) %></button>
+		<div class="col-md-8 col-md-offset-2">
+			<% if current_user%>	
+		 	<button><%= link_to 'Update', edit_artist_path(@artist) %></button>
 		 
-		 <button><%= link_to 'Song List', artists_path %></button>
-     <button><%= link_to 'Destroy', artist_path(@artist),
+		 	<button><%= link_to 'Song List', artists_path %></button>
+     		<button><%= link_to 'Destroy', artist_path(@artist),
               method: :delete,
               data: { confirm: 'Are you sure? This cannot be undone!' } %></button>
-     <% end %>
+     		<% end %>
       </div>
- </div>
+</div>
 </div>

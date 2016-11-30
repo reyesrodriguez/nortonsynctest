@@ -1,28 +1,26 @@
 
-<div id="wrapper">
 
         <!-- Sidebar -->
-        <div id="sidebar-wrapper">
-            <ul class="sidebar-nav">
-                <li class="sidebar-brand">
-                    <a href="#" class="dashboard">
-                        Dashboard
-                    </a>
-                </li>
-                <li class="sidebar-options">
+       
+        <!-- /#sidebar-wrapper -->
+
+<div class="container">
+ <div class="nav-second">
+		<%if current_user.admin? %>
+            <ul class="nav-dash">
+                <li >
                     <%= link_to 'Add Song', new_song_path %>
                 </li>
-                <li class="sidebar-options">
+                <li >
                     <%= link_to "Add New Artist", new_artist_path %>
                 </li>
             </ul>
         </div>
-        <!-- /#sidebar-wrapper -->
-
-<div class="container">
+		<% end %>
+		
 	<div class="row">
 		<div class="col-md-12 songlist-page">
-			<a href="#menu-toggle" class="btn btn-default" id="menu-toggle"><i class="fa fa-caret-left "></i> Dashboard Menu </a>
+			
 
  			<%= form_tag songs_path, :method => "get" do %>
 				<h3><label for="search-by">Search By</label></h3>
@@ -38,11 +36,20 @@
 	  		<% end %>
 
 			<% if @songs.present? %>
-  				<%= render @songs %>
+  				<%= render @songs.reverse %>
 			<% else %>
   				<p class="hidden">There are no songs containing the term(s) <%= params[:search] %>.</p>
 			<% end %>
 
+			<%if current_user.admin? %>
+			<h4>Import Songs!</h4>
+			<%= form_tag import_songs_path, mulitpart: true do %>
+				<%= file_field_tag :file %>
+				<%= submit_tag "Import CSV" %>
+			<% end %>
+			<% end %>
+		
+			
 			<div class="table-responsive">
 				<table class="table-hover table-condensed">
 					<tr class="title-header">
@@ -63,14 +70,23 @@
 						<td><button class="button button-show"><%= link_to 'Show', song_path(song) %></button></td>
       					<td><button class="button button-update"><%= link_to 'Update', edit_song_path(song) %></button></td>
 					</tr>
+					
 						<% end %>
+
 				</table><br><br>
-				
+				<div class="digg_pagination">
+    				<div class="page_info">
+      					<%= page_entries_info @songs %>
+    				</div>
+					<div class="pagination_info">
+    				<%= will_paginate @songs, :container => false %>
+					</div>
+  				</div>
 		
 			</div><!--end of table div -->
 		</div><!--end of div -->
 
 	</div><!--end of row -->
 </div>
-</div>
+
 

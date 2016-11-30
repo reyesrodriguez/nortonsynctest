@@ -1,16 +1,19 @@
 class SongsController < ApplicationController
- before_action :authenticate
-		
+	
+ require 'will_paginate/array'
 
  def index
- 	@songs = Song.page(params[:page])
- 	@songs = Song.all
  		if params[:search]
- 	@songs = Song.search(params[:search])
+ 	@songs = Song.search(params[:search]).paginate(:page => params[:page], :per_page => 10)
  		else 
- 	@songs = Song.all
+ 	@songs = Song.paginate(:page => params[:page], :per_page => 10)
 	end
  end
+
+ def import 
+ 	Song.import(params[:file])
+	redirect_to songs_path, notice: "Songs Imported!"
+end
 
  def show 
  	@song = Song.find_by_id params[:id]
@@ -55,7 +58,7 @@ end
 
  private
  	def song_params
- 		params.require(:song).permit(:title, :artist, :writer, :publisher, :theme)
+ 		params.require(:song).permit(:title, :artist, :writer, :publisher, :theme, :page)
  	end
 
 

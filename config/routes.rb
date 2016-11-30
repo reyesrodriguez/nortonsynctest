@@ -1,30 +1,23 @@
 Rails.application.routes.draw do
-
-  get '/home' => 'pages#home'
-  get '/licensing' => "pages#licensing"
-  get '/catalogs' => 'pages#catalogs'
-  get '/music' => 'artists#index'
-  get '/synch' => 'synch#synch'
-
-  get '/songs' => 'songs#index'
-
-
-  get '/contact', to: 'messages#new', as: 'contact'
-  post '/contact', to: 'messages#create'
-
-
-  get "/user" => "users#new"
-  get "/log-in" => "sessions#new"
-  post "/log-in" => "sessions#create"
-  get "/logout" => "sessions#destroy", as: 'logout'
-
   
 
+  
+  devise_for :admins
+  devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
+   devise_scope :user do
+    get '/register', to: 'devise/registrations#new', as: :register
+    get '/log-in', to: 'devise/sessions#new', as: :login
+ end
 
   # You can have the root of your site routed with "root"
    root 'pages#home'
+
+   get '/music', to: 'artists#index'
+   get '/catalogs', to: 'pages#catalogs'
+   get '/licensing', to: 'pages#licensing'
+   get '/synch', to: 'synch#synch'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
@@ -36,7 +29,9 @@ Rails.application.routes.draw do
   #   resources :products
   resources :artists
   resources :users
-  resources :songs
+  resources :songs do 
+  collection { post :import}
+  end
 
   # Example resource route with options:
   #   resources :products do

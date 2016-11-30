@@ -21,12 +21,13 @@
 
        <ul class="nav navbar-nav navbar-right" id="menu">
         <li class="menu"><a href="/">Home</a></li>
-        <% if current_user %>
-        <li class="logout"><a href=""><%= current_user.name.capitalize %></a></li>
+        <% if user_signed_in? %>
+        <li class="logout"><a href=""><%= current_user.email.capitalize %></a></li>
         <li class="menu"> 
-          <%=link_to '<i class="fa fa-sign-out fa-2x"></i>'.html_safe, :controller => 'sessions', :action => 'destroy' %><%= @username %></li>
+       
+          <%= link_to 'Log out', destroy_user_session_path, method: :delete %>
           <li><%= link_to '<i class="fa fa-tachometer fa-2x"></i>'.html_safe, songs_path %></li>
-      <% end %>
+          <% end %>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->

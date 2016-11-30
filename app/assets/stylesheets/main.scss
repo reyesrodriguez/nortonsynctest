@@ -1,8 +1,6 @@
-
 @import "utilities/variables";
-
 @import "components/buttonnavigation";
-
+@import "components/pagination";
 @import "pages/global";
 @import "pages/artists";
 @import "pages/songs";
@@ -11,8 +9,5 @@
 @import "pages/catalogs";
 @import "pages/licensing";
 @import "pages/contact";
-
-@import "helpers/sessions";
-
 @import "layout/footer";
 @import "layout/navigation";

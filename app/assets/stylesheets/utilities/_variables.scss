@@ -1,17 +1,17 @@
 
 /* fonts */
-$font-stack: 'Roboto', sans-serif;
-$font-light: 300;
+$font-stack:'Helvetica LT W01 Light';
+
 
 
 /* colors */
 $p_color:#212121;
-
 $h1-color:#000000;
 $h3-color:#000000;
 
-$button-size: 3.5rem; 
-$transition: .3s; 
+
+$button-size: 3.5rem;
+$transition: .3s;
 
 @mixin paragraph-styles(){
 	color: $p_color;
@@ -31,8 +31,3 @@ $transition: .3s;
 	content: '';
 	display:block;
 }
-
-
-
-
-
