@@ -11,7 +11,7 @@ def self.search(search)
 end
 
 def self.import(file)
-	CSV.foreach(file, :headers => true) do |row|
+	CSV.foreach(file, :headers => true, encoding:'iso-8859-1:utf-8') do |row|
 		Song.create!(row.to_hash)
 	end
 end

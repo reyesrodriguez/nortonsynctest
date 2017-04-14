@@ -9,7 +9,7 @@ Rails.application.routes.draw do
    devise_scope :user do
     get '/register', to: 'devise/registrations#new', as: :register
     get '/log-in', to: 'devise/sessions#new', as: :login
- end
+  end
 
   # You can have the root of your site routed with "root"
    root 'pages#home'
@@ -18,7 +18,8 @@ Rails.application.routes.draw do
    get '/catalogs', to: 'pages#catalogs'
    get '/licensing', to: 'pages#licensing'
    get '/synch', to: 'synch#synch'
-
+   get '/contact', to: 'messages#new'
+   post '/contact', to: 'messages#create'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
